@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Bouteille d'eau",
+    "price": "0.6 TND",
+    "img": "https://previews.123rf.com/images/eugene78/eugene781702/eugene78170200180/71940602-blank-plastic-water-bottle.jpg"
+  },
+  {
+    "name": "Bouteille de jus",
+    "price": "1.5 TND",
+    "img": "https://5.imimg.com/data5/JD/FY/MY-2693864/juice-bottle-500x500.jpg"
+  },
+  {
+    "name": "Bouteille de lait",
+    "price": "1.2 TND",
+    "img": "https://lakelandcamel.scene7.com/is/image/LakelandCamel/26391_1?$800$"
+  }
+]

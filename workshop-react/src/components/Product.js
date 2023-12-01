@@ -5,7 +5,6 @@ export default class Product extends Component {
   constructor(props) {
     super(props);
     this.state = { product: props.product, updated: 0 };
-    this.addPrice = this.addPrice.bind(this);
   }
 
   componentDidMount() {
@@ -43,7 +42,7 @@ export default class Product extends Component {
         </ProductImageWrapper>
         <ProductInfoWrapper>
           <span>{this.props.product.name}</span>
-          <span>{this.props.product.price} </span>
+          <span>{this.state.product.price.toFixed(1)} TND </span>
           {Number(this.state.product.price) > 2 ? "Yesir ghali :p" : "Ichri"}
           <button onClick={this.addPrice}>Ajouter 0.1 TND</button>
         </ProductInfoWrapper>
@@ -60,6 +59,7 @@ const ProductFrame = styled.div`
   margin: 10px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 `;
 
 const ProductImage = styled.img`

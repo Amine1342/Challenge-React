@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default class Product extends Component {
@@ -41,9 +42,13 @@ export default class Product extends Component {
           <ProductImage src={this.props.product.img}></ProductImage>
         </ProductImageWrapper>
         <ProductInfoWrapper>
-          <span>{this.props.product.name}</span>
-          <span>{this.state.product.price.toFixed(1)} TND </span>
-          {Number(this.state.product.price) > 2 ? "Yesir ghali :p" : "Ichri"}
+          <span>
+            <Link to={`products/${this.props.product.id}`}>
+              {this.props.product.name}
+            </Link>
+          </span>
+          <span>{this.state.product.price.toFixed(1)} TND</span>
+          {Number(this.state.product.price) > 2 && "Yesir ghali :p"}
           <button onClick={this.addPrice}>Ajouter 0.1 TND</button>
         </ProductInfoWrapper>
       </ProductFrame>
